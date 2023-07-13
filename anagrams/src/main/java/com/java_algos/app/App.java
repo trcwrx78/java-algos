@@ -43,12 +43,6 @@ public class App
 
         // compares the two arrays
         // boolean isAnagram = Arrays.equals(str1Arr, str2Arr);
-        
-        if (isAnagram) {
-            System.out.println("The two strings are anagrams");
-        } else {
-            System.out.println("The two strings are not anagrams");
-        }
 
         return isAnagram;
     }
