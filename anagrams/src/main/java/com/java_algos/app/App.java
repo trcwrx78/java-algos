@@ -1,6 +1,7 @@
 package com.java_algos.app;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 // --- Directions
 // Check to see if two provided strings are anagrams of eachother.
@@ -16,10 +17,23 @@ public class App
 {
     public static void main( String[] args )
     {
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter the first string: ");
+        String str1 = scanner.nextLine();
 
-        anagrams("RAIL! SAFETY!", "fairy tales");
-        anagrams("Hi there", "Bye there");
+        System.out.println("Enter the second string: ");
+        String str2 = scanner.nextLine();
+
+        boolean result = anagrams(str1, str2);
+
+        if (result) {
+            System.out.println("The strings are anagrams.");
+        } else {
+            System.out.println("The strings are not anagrams.");
+        }
+
+        scanner.close();
     }
 
     public static boolean anagrams(String str1, String str2) {
